@@ -1,6 +1,4 @@
 let num = 266219;
-let str = num.toString();
-let arr = str.split('');
 let num1 = 1;
 
 
