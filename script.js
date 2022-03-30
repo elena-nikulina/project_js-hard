@@ -11,9 +11,9 @@ let days_en = [
 let date = new Date();
 let day_number = date.getDay();
 
-if (lang = 'ru') {
+if (lang == 'ru') {
     console.log(days_ru[day_number]);
-} else if (lang = 'en') {
+} else if (lang == 'en') {
     console.log(days_en[day_number]);
 }
 
@@ -34,20 +34,18 @@ let lang_arr = [ ['вс', 'пн', 'вт', 'ср', 'чт', 'пн', 'сб'],
 
 let r = 0;
 let p = 0;
-console.log(lang_arr[0][day_number]);
-while ((lang = 'ru') && (r = 0)) {
+    
+while ((lang == 'ru') && (r ==0)) {
     console.log(lang_arr[0][day_number]);
     r++;
 }
-    
-while ((lang = 'en') && (p = 0)) {
+
+while ((lang == 'en') && (p ==0)) {
     console.log(lang_arr[1][day_number]);
     p++;
 }
  
-let namePerson = 'Артем';
-let namePerson1 = namePerson=='Артем' ? 'директор' : 'студент';
-let namePerson2 = namePerson=='Александр' ? 'преподаватель' : 'студент';
+let namePerson = 'Артем' ? console.log('директор') :
+                  'Александр' ? console.log('преподаватель') : console.log('студент');
 
-console.log(namePerson1);
-console.log(namePerson2);
+
