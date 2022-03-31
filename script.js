@@ -44,8 +44,10 @@ while ((lang == 'en') && (p ==0)) {
     console.log(lang_arr[1][day_number]);
     p++;
 }
- 
-let namePerson = 'Артем' ? console.log('директор') :
-                  'Александр' ? console.log('преподаватель') : console.log('студент');
+
+
+let namePerson = 'Артем';
+namePerson = namePerson == 'Артем' ? console.log('директор') :
+            namePerson == 'Александр' ? console.log('преподаватель') : console.log('студент');
 
 
