@@ -1,26 +1,52 @@
-'use strict';
+let lang = 'ru';
 
-let str1 = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa alias blanditiis sint id eveniet, voluptates ex quod repellat, vero nesciunt earum aliquid. Veritatis nemo praesentium, velit porro rerum asperiores ratione voluptatum deleniti dignissimos quae necessitatibus culpa, temporibus, expedita consectetur!';
-let arrStr;
-let str0;
-let strNew;
+let days_ru = [
+    'вс', 'пн', 'вт', 'ср', 'чт', 'пн', 'сб'
+];
 
-function checkStr(str) {
-    if (typeof(str) !== 'string') {
-        console.log('Передана не строка!');
+let days_en = [
+    'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'
+];
 
-    } else {
-        str.trim();
-        if (str.length > 30) {
-            strNew = str.substring(0, 30);
-            arrStr = strNew.split('');
-            arrStr.push('.');
-            arrStr.push('.');
-            arrStr.push('.');
-            str0 = arrStr.join('');
-            console.log(str0);
-        }
-    }
+let date = new Date();
+let day_number = date.getDay();
+
+if (lang == 'ru') {
+    console.log(days_ru[day_number]);
+} else if (lang == 'en') {
+    console.log(days_en[day_number]);
 }
 
-checkStr(str1);
+switch(lang) {
+    case 'ru': 
+        console.log(days_ru[day_number]);
+        break;
+    case 'en':
+        console.log(days_en[day_number]);
+        break;
+    default:
+        console.log('Такого языка не предусмотрено!');
+        break;
+}
+
+let lang_arr = [ ['вс', 'пн', 'вт', 'ср', 'чт', 'пн', 'сб'], 
+                ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa']];
+
+let r = 0;
+let p = 0;
+    
+while ((lang == 'ru') && (r ==0)) {
+    console.log(lang_arr[0][day_number]);
+    r++;
+}
+
+while ((lang == 'en') && (p ==0)) {
+    console.log(lang_arr[1][day_number]);
+    p++;
+}
+ 
+let namePerson = 'Александр';
+namePerson = namePerson =='Артем' ? console.log('директор') :
+            namePerson =='Александр' ? console.log('преподаватель') : console.log('студент');
+
+
