@@ -7,12 +7,12 @@ let strNew;
 let str2 = prompt('Введите строку');
 
 function checkStr(str) {
-    str = str.trim();
+    
     if (typeof(str) !== 'string') {
         console.log('Передана не строка!');
 
     } else {
-
+        str = str.trim();
         if (str.length > 30) {
             strNew = str.substring(0, 30);
             arrStr = strNew.split('');
