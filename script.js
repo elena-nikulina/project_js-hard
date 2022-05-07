@@ -25,19 +25,20 @@ let today = new Date();
 
 let dayToday = today.getDay();
 
-for(let day of week) {
-    if (day !== dayToday && day !== week[0] && week[6]) {
-        console.log(day);
+for (let j = 0; j < week.length; j++) {
+    
+    if (week[j] !== week[dayToday] && j !== 0 && j !== 6) {
+        document.write(week[j] + '<br>');
     }
-    if (day === week[0] || day === week[6]) {
-        //day.style.fontStyle = 'italic';
-        console.log('<i>' + day + '</i>');
+    else if (week[j] === week[dayToday] && j !== 0 && j !== 6) {
+        document.write('<strong>' + week[j] + '</strong>' + '<br>');
     }
-    if (day === dayToday) {
-        //day.style.fontStyle = 'bold';
-        console.log('<strong>' + day + '</strong>');
+    else if (week[j] !== week[dayToday] && (j === 0 || j === 6)) {
+        document.write('<i>' + week[j] + '</i>' + '<br>');
     }
-
+    else if (week[j] === week[dayToday] && (j === 0 || j === 6)) {
+        let day = '<strong>' + week[j] + '</strong>';
+        document.write('<i>' + day + '</i>' + '<br>');
+    }
+    
 }
-
-
