@@ -1,29 +1,46 @@
 'use strict';
 
-let str1 = '     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro ipsa alias blanditiis sint id eveniet, voluptates ex quod repellat, vero nesciunt earum aliquid. Veritatis nemo praesentium, velit porro rerum asperiores ratione voluptatum deleniti dignissimos quae necessitatibus culpa, temporibus, expedita consectetur!';
-let arrStr;
-let str0;
-let strNew;
-let str2 = prompt('Введите строку');
+/*let num1 = prompt('Введите значение');
 
-function checkStr(str) {
+
+const isNumber = function(num) {
     
-    if (typeof(str) !== 'string') {
-        console.log('Передана не строка!');
-
+    if (num === 'null') {
+        num = 0;
     } else {
-        str = str.trim();
-        if (str.length > 30) {
-            strNew = str.substring(0, 30);
-            arrStr = strNew.split('');
-            arrStr.push('.');
-            arrStr.push('.');
-            arrStr.push('.');
-            str0 = arrStr.join('');
-            console.log(str0);
-        }
+        num = num.trim();
+        num = +num;
+    }
+      
+    return !isNaN((parseFloat(num))) && isFinite(num);
+}
+
+if (isNumber(num1)) {
+    console.log(num1, typeof(num1));
+}*/
+
+let arr=[];
+let arr1 = [];
+
+arr = ['2435', '342189', '4312670', '13256432', '354', '42318', '897642'];
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i][0] === '2' || arr[i][0] === '4') {
+        console.log(arr[i]);
     }
 }
 
-checkStr(str1);
-checkStr(str2);
+console.log(1 + ' Делители: ' + ' 1 ');
+console.log(2 + ' Делители: ' + ' 1 ' + 2);
+console.log(3 + ' Делители: ' + ' 1 ' + 3);
+console.log(5 + ' Делители: ' + ' 1 ' + 5);
+console.log(7 + ' Делители: ' + ' 1 ' + 7);
+
+for (let j = 8; j < 100; j++) {
+    
+    if (j % 2 !== 0 && j % 3 !== 0 && j % 5 !== 0 && j % 7 !== 0) {
+        arr1.push(j);
+        console.log(j + ' Делители: ' + ' 1 ' + j);
+    }
+}
+
